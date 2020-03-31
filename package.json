@@ -1,5 +1,5 @@
 {
-  "name": "react-cornerstone-viewport",
+  "name": "vindoc-react-cornerstone-viewport",
   "version": "0.2.2",
   "description": "Cornerstone medical image viewport component for React",
   "author": "Cornerstone Contributors",
@@ -36,7 +36,8 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.2.1",
     "prop-types": "^15.7.2",
-    "react-resize-detector": "^4.2.1"
+    "react-resize-detector": "^4.2.1",
+    "vindoc-cornerstone-tools": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
@@ -51,7 +52,6 @@
     "commitizen": "3.1.x",
     "cornerstone-core": "2.3.x",
     "cornerstone-math": "0.1.x",
-    "cornerstone-tools": "^4.2.2",
     "cornerstone-wado-image-loader": "3.0.x",
     "cross-env": "^5.2.0",
     "css-loader": "^3.2.0",
