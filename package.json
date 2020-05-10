@@ -1,6 +1,6 @@
 {
   "name": "react-vindoc-viewport",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cornerstone medical image viewport component for React",
   "author": "Cornerstone Contributors",
   "license": "MIT",
@@ -37,7 +37,7 @@
     "date-fns": "^2.2.1",
     "prop-types": "^15.7.2",
     "react-resize-detector": "^4.2.1",
-    "vindoc-tools": "0.0.1"
+    "vindoc-tools": "0.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
