@@ -7,7 +7,7 @@ import LoadingIndicator from '../LoadingIndicator/LoadingIndicator.js';
 import ViewportOrientationMarkers from '../ViewportOrientationMarkers/ViewportOrientationMarkers.js';
 import windowResizeHandler from './windowResizeHandler.js';
 import cornerstone from 'cornerstone-core';
-import cornerstoneTools from 'vindoc-cornerstone-tools';
+import cornerstoneTools from 'vindoc-tools';
 import ReactResizeDetector from 'react-resize-detector/lib/index.js';
 
 // Util
@@ -572,7 +572,7 @@ class CornerstoneViewport extends Component {
    * @returns {undefined}
    */
   _handleOnElementEnabledEvent = (clear = false) => {
-    const handler = evt => {
+    const handler = (evt) => {
       const elementThatWasEnabled = evt.detail.element;
       if (elementThatWasEnabled === this.element) {
         // Pass Event
@@ -619,7 +619,7 @@ class CornerstoneViewport extends Component {
 
     // We use this to "flip" `isLoading` to true, if our startLoading request
     // takes longer than our "loadIndicatorDelay"
-    const startLoadHandler = element => {
+    const startLoadHandler = (element) => {
       clearTimeout(this.loadHandlerTimeout);
 
       // Call user defined loadHandler
@@ -655,7 +655,7 @@ class CornerstoneViewport extends Component {
   }
 
   // TODO: May need to throttle?
-  onImageRendered = event => {
+  onImageRendered = (event) => {
     const viewport = event.detail.viewport;
 
     this.setState({
@@ -668,7 +668,7 @@ class CornerstoneViewport extends Component {
     });
   };
 
-  onNewImage = event => {
+  onNewImage = (event) => {
     const { imageId } = event.detail.image;
     const { sopInstanceUid } =
       cornerstone.metaData.get('generalImageModule', imageId) || {};
@@ -694,13 +694,13 @@ class CornerstoneViewport extends Component {
     this.numImagesLoaded++;
   };
 
-  onImageProgress = e => {
+  onImageProgress = (e) => {
     this.setState({
       imageProgress: e.detail.percentComplete,
     });
   };
 
-  imageSliderOnInputCallback = value => {
+  imageSliderOnInputCallback = (value) => {
     this.setViewportActive();
 
     scrollToIndex(this.element, value);
@@ -739,9 +739,9 @@ class CornerstoneViewport extends Component {
         />
         <div
           className="viewport-element"
-          onContextMenu={e => e.preventDefault()}
-          onMouseDown={e => e.preventDefault()}
-          ref={input => {
+          onContextMenu={(e) => e.preventDefault()}
+          onMouseDown={(e) => e.preventDefault()}
+          ref={(input) => {
             this.element = input;
           }}
         >
@@ -778,9 +778,9 @@ function _trySetActiveTool(element, activeToolName) {
   }
 
   const validTools = cornerstoneTools.store.state.tools.filter(
-    tool => tool.element === element
+    (tool) => tool.element === element
   );
-  const validToolNames = validTools.map(tool => tool.name);
+  const validToolNames = validTools.map((tool) => tool.name);
 
   if (!validToolNames.includes(activeToolName)) {
     console.warn(

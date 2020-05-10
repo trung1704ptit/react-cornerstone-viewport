@@ -1,7 +1,7 @@
 import { PureComponent } from 'react';
 import React from 'react';
 import PropTypes from 'prop-types';
-import cornerstoneTools from 'vindoc-cornerstone-tools';
+import cornerstoneTools from 'vindoc-tools';
 import './ViewportOrientationMarkers.css';
 
 /**

@@ -2,7 +2,7 @@ import dicomParser from 'dicom-parser';
 import cornerstone from 'cornerstone-core';
 import cornerstoneWADOImageLoader from 'cornerstone-wado-image-loader';
 import cornerstoneMath from 'cornerstone-math';
-import cornerstoneTools from 'vindoc-cornerstone-tools';
+import cornerstoneTools from 'vindoc-tools';
 import Hammer from 'hammerjs';
 
 export default function initCornerstone() {
